@@ -1,18 +1,53 @@
 {
-  "name": "slit-animation-sample",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
+  "name": "@takumon/react-slit-animation",
+  "description": "React componet of slit animation",
+  "version": "0.1.4",
+  "author": "takumon",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "private": false,
+  "homepage": "https://github.com/Takumon/react-slit-animation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Takumon/react-slit-animation"
+  },
+  "bugs": {
+    "url": "https://github.com/Takumon/react-slit-animation/issues"
+  },
+  "keywords": [
+    "react",
+    "slit animation",
+    "npm"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d examples/dist",
+    "publish-demo": "npm run build && npm run deploy",
+    "npmpublish": "npm publish --access=public"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "file-loader": "^2.0.0",
+    "gh-pages": "^2.0.1",
+    "html-webpack-plugin": "^3.2.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1",
-    "styled-components": "^4.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "url-loader": "^1.1.2",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -22,5 +57,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "dependencies": {
+    "styled-components": "^4.1.1"
+  }
 }

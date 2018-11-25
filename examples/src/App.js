@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 
 import react1 from './images/react/1.png'
@@ -48,7 +48,7 @@ import man3 from './images/man/3.png'
 import man4 from './images/man/4.png'
 
 
-import SlitAnimation from './slit-animation'
+import SlitAnimation from '../../src'
 
 const App = () => {
 
@@ -56,6 +56,11 @@ const App = () => {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   `
 
   const AppTitle = styled.h1`
